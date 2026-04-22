@@ -16,35 +16,36 @@
 .fade-in-delay-3 { transition-delay: 0.45s; }
 
 :root {
-  /* B案 (lumiarch-inspired) — 静かで編集的、ニュートラルクリーム + 深緑アクセント */
-  --red: #3a5f4a;            /* 主アクセント: muted forest green */
-  --red-dark: #2b4738;
-  --red-light: rgba(58, 95, 74, 0.06);
-  --purple: #6b6458;         /* 副アクセント: warm taupe */
-  --purple-dark: #4d4740;
-  /* 多色アクセントは全て同一のmuted greenに統一（モノクロマティック） */
-  --dc-blue: #3a5f4a;
-  --dc-green: #3a5f4a;
-  --dc-orange: #8a7a5c;
-  --dc-yellow: #b8a87d;
-  --dc-magenta: #6b6458;
-  --gradient: linear-gradient(135deg, #3a5f4a 0%, #2b4738 100%);
-  --gradient-soft: linear-gradient(135deg, rgba(58,95,74,0.95) 0%, rgba(43,71,56,0.92) 100%);
-  --gradient-multi: linear-gradient(90deg, #3a5f4a 0%, #2b4738 100%);
-  /* lumiarch調 ニュートラル */
-  --brown: #1a1a1a;
-  --brown-light: #3a3a3a;
-  --pink-bg: #ecece3;
-  --black: #0e0e0e;
-  --white: #FFFFFF;
-  --gray-light: #ecece3;
-  --gray: #8a8578;
-  --gray-border: #c7c3b6;
-  --text: #1a1a1a;
-  --text-light: #4b4b4b;
-  --bg-base: #f5f2ea;
+  /* B案v2 (lumiarch-inspired, 暖色化) — 温かみのあるクリーム + ソフト深緑 + 麦/タン */
+  --red: #4a6b5a;              /* 主アクセント: ややソフトな forest green */
+  --red-dark: #375141;
+  --red-light: rgba(74, 107, 90, 0.06);
+  --purple: #b79568;           /* 副アクセント: 麦・タン */
+  --purple-dark: #8e7246;
+  /* エディトリアル用のウォーム系アクセント */
+  --dc-blue: #4a6b5a;
+  --dc-green: #4a6b5a;
+  --dc-orange: #b79568;
+  --dc-yellow: #d4b896;
+  --dc-magenta: #8a7a5c;
+  --gradient: linear-gradient(135deg, #4a6b5a 0%, #375141 100%);
+  --gradient-soft: linear-gradient(135deg, rgba(74,107,90,0.95) 0%, rgba(55,81,65,0.92) 100%);
+  --gradient-multi: linear-gradient(90deg, #4a6b5a 0%, #375141 100%);
+  /* 暖色ニュートラル（lumiarch調・若干ピーチ寄り） */
+  --brown: #1c1a14;
+  --brown-light: #3d3a30;
+  --pink-bg: #ede6d6;          /* セクション alt: やや暗い warm cream */
+  --black: #131108;
+  --white: #fdfbf4;            /* ピュア白ではなく微かな warmth */
+  --gray-light: #ede6d6;
+  --gray: #8a8170;
+  --gray-border: #d5cdb8;
+  --text: #1c1a14;
+  --text-light: #5a564a;
+  --bg-base: #f5f0e3;          /* warmer cream (peachy) */
   --font-ja: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'hiragino kaku gothic pro', 'Helvetica Neue', 'Helvetica', 'Arial', 'メイリオ', 'meiryo', sans-serif;
   --font-mincho: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --font-serif: 'DM Serif Display', 'Shippori Mincho', 'Hiragino Mincho ProN', serif;
   --font-en: 'Outfit', 'Manrope', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
@@ -190,7 +191,7 @@ header nav a:hover { color: var(--red); }
   height: auto;
   opacity: 0;
   transform: scale(0.5) rotate(-6deg);
-  filter: drop-shadow(0 24px 60px rgba(58,95,74,0.45));
+  filter: drop-shadow(0 24px 60px rgba(74,107,90,0.45));
   animation: footprint-impact 5.5s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
 }
 @keyframes footprint-impact {
@@ -231,7 +232,7 @@ header nav a:hover { color: var(--red); }
   line-height: 1.4;
   margin-bottom: 72px;
   letter-spacing: 0.06em;
-  text-shadow: 2px 3px 0 rgba(58,95,74,0.1), 4px 6px 12px rgba(20,35,60,0.18);
+  text-shadow: 2px 3px 0 rgba(74,107,90,0.1), 4px 6px 12px rgba(20,35,60,0.18);
 }
 .hero-logo-wrap {
   margin-bottom: 40px;
@@ -248,7 +249,7 @@ header nav a:hover { color: var(--red); }
   margin-bottom: 52px;
   letter-spacing: 0.04em;
   font-weight: 500;
-  text-shadow: 1px 2px 0 rgba(58,95,74,0.08), 2px 4px 8px rgba(20,35,60,0.15);
+  text-shadow: 1px 2px 0 rgba(74,107,90,0.08), 2px 4px 8px rgba(20,35,60,0.15);
 }
 .hero-tagline-accent {
   color: var(--red);
@@ -269,13 +270,13 @@ header nav a:hover { color: var(--red); }
   padding: 40px 56px 24px;
   margin-top: 20px;
   text-align: center;
-  box-shadow: 0 8px 24px rgba(58,95,74,0.14);
+  box-shadow: 0 8px 24px rgba(74,107,90,0.14);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 .hero-cta-box:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 44px rgba(58,95,74,0.28);
+  box-shadow: 0 18px 44px rgba(74,107,90,0.28);
 }
 .cta-stage-ribbon {
   position: absolute;
@@ -288,7 +289,7 @@ header nav a:hover { color: var(--red); }
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.14em;
-  box-shadow: 0 4px 14px rgba(58,95,74,0.28);
+  box-shadow: 0 4px 14px rgba(74,107,90,0.28);
   white-space: nowrap;
   clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0 50%);
   display: inline-flex;
@@ -350,7 +351,7 @@ header nav a:hover { color: var(--red); }
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  box-shadow: 0 10px 28px rgba(58,95,74,0.35);
+  box-shadow: 0 10px 28px rgba(74,107,90,0.35);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -367,7 +368,7 @@ header nav a:hover { color: var(--red); }
 }
 .hero-cta-box:hover .cta-action {
   transform: scale(1.04);
-  box-shadow: 0 14px 36px rgba(58,95,74,0.5);
+  box-shadow: 0 14px 36px rgba(74,107,90,0.5);
 }
 .hero-cta-box:hover .cta-action::before {
   left: 100%;
@@ -383,7 +384,7 @@ header nav a:hover { color: var(--red); }
 .cta-warning {
   margin-top: 18px;
   padding-top: 14px;
-  border-top: 1px dashed rgba(58,95,74,0.3);
+  border-top: 1px dashed rgba(74,107,90,0.3);
   font-size: 11px;
   color: var(--red);
   font-weight: 700;
@@ -523,7 +524,7 @@ header nav a:hover { color: var(--red); }
 .about-highlight {
   margin-top: 24px !important;
   padding: 18px 22px;
-  background: linear-gradient(135deg, rgba(58,95,74,0.08) 0%, rgba(107,100,88,0.08) 100%);
+  background: linear-gradient(135deg, rgba(74,107,90,0.08) 0%, rgba(183,149,104,0.08) 100%);
   border-left: 4px solid var(--red);
   border-radius: 6px;
   font-size: 16px !important;
@@ -728,14 +729,14 @@ header nav a:hover { color: var(--red); }
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(58,95,74,0.15), transparent);
+  background: linear-gradient(90deg, transparent, rgba(74,107,90,0.15), transparent);
   transition: left 0.5s ease;
 }
 .merit-toggle:hover::before { left: 100%; }
 .merit-toggle:hover {
   background: var(--red);
   color: var(--white);
-  box-shadow: 0 0 0 1px var(--red), 0 0 20px rgba(58,95,74,0.4);
+  box-shadow: 0 0 0 1px var(--red), 0 0 20px rgba(74,107,90,0.4);
 }
 .merit-toggle-icon {
   display: inline-flex;
@@ -776,7 +777,7 @@ header nav a:hover { color: var(--red); }
   clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
   font-family: var(--font-ja);
   letter-spacing: 0.02em;
-  border: 1px solid rgba(107,100,88,0.15);
+  border: 1px solid rgba(183,149,104,0.15);
 }
 .merit-detail > p::before,
 .merit-detail > p::after {
@@ -837,7 +838,7 @@ header nav a:hover { color: var(--red); }
 .merit-badge-new {
   background: var(--gradient);
   color: var(--white);
-  box-shadow: 0 2px 8px rgba(58,95,74,0.3);
+  box-shadow: 0 2px 8px rgba(74,107,90,0.3);
 }
 .merit-notes {
   list-style: none;
@@ -925,7 +926,7 @@ header nav a:hover { color: var(--red); }
   background: var(--gradient);
   color: var(--white);
   border-radius: 50%;
-  box-shadow: 0 6px 16px rgba(58,95,74,0.25);
+  box-shadow: 0 6px 16px rgba(74,107,90,0.25);
 }
 .req-card-icon svg {
   width: 28px;
@@ -1025,7 +1026,7 @@ header nav a:hover { color: var(--red); }
 .req-card-notes {
   margin-top: 12px;
   padding: 14px 16px;
-  background: linear-gradient(135deg, rgba(58,95,74,0.04) 0%, rgba(107,100,88,0.04) 100%);
+  background: linear-gradient(135deg, rgba(74,107,90,0.04) 0%, rgba(183,149,104,0.04) 100%);
   border-left: 2px solid var(--red);
   border-radius: 0 6px 6px 0;
 }
@@ -1149,7 +1150,7 @@ header nav a:hover { color: var(--red); }
 .schedule-item.active::before {
   border-color: var(--red);
   background: var(--red);
-  box-shadow: 0 0 0 4px rgba(58,95,74,0.15);
+  box-shadow: 0 0 0 4px rgba(74,107,90,0.15);
 }
 .schedule-date-block {
   position: absolute;
@@ -1601,7 +1602,7 @@ header nav a:hover { color: var(--red); }
   border-radius: 12px;
   padding: 64px 40px;
   backdrop-filter: blur(4px);
-  box-shadow: 0 10px 40px rgba(58,95,74,0.1);
+  box-shadow: 0 10px 40px rgba(74,107,90,0.1);
 }
 .entry-prep-label {
   font-size: 36px;
@@ -2158,7 +2159,7 @@ header { height: 84px; }
 }
 .about-text-block p { font-weight: 500; line-height: 2.1; }
 .about-highlight {
-  background: rgba(58,95,74,0.06);
+  background: rgba(74,107,90,0.06);
   border-left: 2px solid var(--red);
   border-radius: 0;
 }
@@ -2222,7 +2223,7 @@ header { height: 84px; }
 }
 .merit-detail > p {
   background: var(--pink-bg);
-  border: 1px solid rgba(58,95,74,0.15);
+  border: 1px solid rgba(74,107,90,0.15);
   clip-path: none;
   border-radius: 0;
 }
@@ -2268,7 +2269,7 @@ header { height: 84px; }
 }
 .req-arrow { color: var(--red); }
 .req-card-notes {
-  background: rgba(58,95,74,0.04);
+  background: rgba(74,107,90,0.04);
   border-left: 2px solid var(--red);
   border-radius: 0;
 }
@@ -2281,7 +2282,7 @@ header { height: 84px; }
   background: linear-gradient(to bottom, var(--red) 0%, var(--red) 60%, var(--gray-border) 100%);
 }
 .schedule-item.active::before {
-  box-shadow: 0 0 0 4px rgba(58,95,74,0.15);
+  box-shadow: 0 0 0 4px rgba(74,107,90,0.15);
 }
 .schedule-day-label { border-radius: 0; }
 
@@ -2324,7 +2325,7 @@ header { height: 84px; }
 .pm-photo span::before {
   content: '×';
   font-size: 40px;
-  color: rgba(58,95,74,0.3);
+  color: rgba(74,107,90,0.3);
   font-weight: 300;
   letter-spacing: 0;
   display: block;
@@ -2382,7 +2383,7 @@ header { height: 84px; }
 .hero-cta-box:hover .cta-action {
   transform: none;
   background: var(--red);
-  box-shadow: 0 4px 18px rgba(58,95,74,0.3);
+  box-shadow: 0 4px 18px rgba(74,107,90,0.3);
 }
 .cta-warning {
   color: var(--text-light);
@@ -2493,4 +2494,204 @@ footer .footer-akatsuki-link a:hover {
   .hero-logo-img { max-width: 320px; }
   .footer-brand-logo { max-width: 240px !important; }
   .entry-hero .entry-hero-inner::before { width: 280px; height: 68px; }
+}
+
+/* ============================================================ */
+/* ===== B案v2 LUMIARCH-MORE (温色＋素材感＋エディトリアル) ===== */
+/* ============================================================ */
+
+/* HERO：アトモスフェリックなフィーチャー色面を背面に置く
+   （大判写真が入るようなスペースを温色でシミュレート） */
+.hero {
+  background:
+    radial-gradient(ellipse 60% 70% at 85% 45%, rgba(183,149,104,0.22) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 10% 70%, rgba(74,107,90,0.10) 0%, transparent 55%),
+    linear-gradient(180deg, #f5f0e3 0%, #ede6d6 100%);
+}
+.kv-stage::before {
+  content: '';
+  position: absolute;
+  right: -8%;
+  top: 15%;
+  width: 48vw;
+  max-width: 580px;
+  height: 70%;
+  background: linear-gradient(135deg, rgba(213,184,138,0.45) 0%, rgba(183,149,104,0.28) 55%, rgba(74,107,90,0.18) 100%);
+  z-index: -1;
+  opacity: 0;
+  animation: kv-block-fade 1.8s cubic-bezier(0.65, 0, 0.35, 1) 0.2s forwards;
+}
+@keyframes kv-block-fade {
+  0%   { opacity: 0; transform: translateX(40px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+/* 右下にグレインっぽいドット模様（素材感） */
+.kv-stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(28,26,20,0.08) 1px, transparent 0);
+  background-size: 4px 4px;
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* セクション見出しの頭にエディトリアル・ルール（短い横線） */
+.section-heading {
+  position: relative;
+  padding-top: 16px;
+}
+.section-heading::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 1px;
+  background: var(--red);
+  margin-bottom: 20px;
+}
+/* about セクションは右寄せなのでルールも右寄せ */
+.about-text-block .section-heading::before { margin-left: auto; }
+/* Chief PM と PM の見出しは連続するので控えめに */
+.pm-section .section-heading { padding-top: 24px; }
+
+/* ヘッダーに小さく「EDITORIAL / 2026」のキャプション風マーカー（右下の extras） */
+header::after {
+  content: 'EDITORIAL · 2026';
+  position: absolute;
+  right: 160px;
+  bottom: 12px;
+  font-family: var(--font-en);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  color: var(--text-light);
+  pointer-events: none;
+}
+@media (max-width: 900px) { header::after { display: none; } }
+
+/* 数字・章題に微かなセリフを使う（DM Serif Display） */
+.merit-num,
+.kv-index,
+.schedule-date strong {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+.merit-num { font-size: 26px; }
+.kv-index {
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+}
+.kv-index-slash {
+  font-style: italic;
+  color: var(--red);
+}
+
+/* CTA も温色に馴染ませる（リボンは麦色寄りに） */
+.cta-stage-ribbon {
+  background: var(--red);
+}
+.cta-stage-ribbon::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 1px;
+  height: 6px;
+  background: var(--red);
+  transform: translateX(-50%);
+}
+
+/* 見出しに small tag ラベルを添える（[ CHAPTER ] 風） */
+.section-heading-ja {
+  position: relative;
+  display: inline-block;
+  padding-left: 14px;
+}
+.section-heading-ja::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--red);
+  font-weight: 700;
+}
+
+/* NEWSアイテムに雑誌カテゴリ風のタグ位置 */
+.news-item {
+  padding: 20px 0;
+  align-items: baseline;
+  gap: 24px;
+}
+.news-date {
+  font-family: var(--font-en);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  padding: 3px 10px;
+  border: 1px solid var(--gray-border);
+  background: var(--white);
+  color: var(--text-light);
+  font-size: 11px;
+  border-radius: 0;
+  flex-shrink: 0;
+}
+
+/* 重要プログラムバナーのタイポを温色 + サブタイトルにセリフ斜体 */
+.program-banner {
+  background: linear-gradient(135deg, var(--red) 0%, var(--red-dark) 100%);
+  position: relative;
+  padding: 56px 32px;
+}
+.program-banner::before {
+  content: 'FEATURE';
+  position: absolute;
+  top: 18px;
+  left: 24px;
+  font-family: var(--font-en);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  color: rgba(253,251,244,0.7);
+}
+.program-banner::after {
+  content: '01 / 05';
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-family: var(--font-serif);
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(253,251,244,0.75);
+}
+
+/* アバウト：右側見出しの上にセリフでの "ABOUT the program" 的 caption */
+.about-text-block .section-heading::after {
+  content: 'about the program';
+  display: block;
+  margin-top: 8px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--red);
+  letter-spacing: 0.02em;
+}
+
+/* FOOTER：cream 背景に微細なドット（素材感） */
+footer {
+  position: relative;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(28,26,20,0.05) 1px, transparent 0),
+    linear-gradient(180deg, #ede6d6 0%, #e4dcc8 100%);
+  background-size: 4px 4px, auto;
+}
+
+/* 再度スマホ調整 */
+@media (max-width: 900px) {
+  .kv-stage::before { right: -30%; width: 90vw; opacity: 0.5; }
+  .section-heading::before { width: 28px; }
+  .program-banner::before,
+  .program-banner::after { display: none; }
 }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ENTRY | D-CROSS TAKASAKI 2026</title>
+  <meta name="description" content="D-CROSS TAKASAKI 2026 エントリーページ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="index.html" class="header-logo">
+    <img src="assets/images/logo-d-cross.svg" alt="D-CROSS TAKASAKI 2026" class="header-logo-img">
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+  <div class="header-right">
+    <nav>
+      <ul>
+        <li><a href="index.html#program">PROGRAM</a></li>
+        <li><a href="index.html#schedule">SCHEDULE</a></li>
+        <li><a href="index.html#consortium">CONSORTIUM</a></li>
+        <li><a href="index.html#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+    <a href="entry.html" class="header-entry">ENTRY</a>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="index.html#program">PROGRAM</a></li>
+    <li><a href="index.html#schedule">SCHEDULE</a></li>
+    <li><a href="index.html#consortium">CONSORTIUM</a></li>
+    <li><a href="index.html#contact">CONTACT</a></li>
+  </ul>
+  <div class="mobile-nav-cta">
+    <a href="entry.html" class="header-entry">ENTRY</a>
+  </div>
+</div>
+
+<!-- ENTRY -->
+<section class="entry-hero">
+  <div class="entry-hero-inner">
+    <div class="section-heading">
+      <span class="section-heading-en">ENTRY</span>
+      <p class="section-heading-ja">エントリー</p>
+    </div>
+    <div class="entry-prep-box">
+      <p class="entry-prep-label">準備中</p>
+      <p class="entry-prep-text">エントリー受付は <strong>2026年●月</strong> 開始予定です。<br>1次募集締切：2026年7月3日（金）12:00<br>詳細が決まり次第、こちらのページでご案内いたします。</p>
+      <a href="index.html" class="entry-back-btn">トップへ戻る</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-info">
+      <h3 class="footer-info-title">INFORMATION</h3>
+      <p class="footer-office-name">D-CROSS TAKASAKI プログラム事務局</p>
+      <p class="footer-office-label">〈 補助事業者 〉NTT東日本株式会社 埼玉事業部 群馬支店<br>〈 事務局支援 〉株式会社NTT DXパートナー</p>
+      <p class="footer-office-mail">Mail：<a href="mailto:xxxxxxxx@east.ntt.co.jp">xxxxxxxx@east.ntt.co.jp</a></p>
+      <p class="footer-office-link">連携協定：<a href="https://www.tcue.ac.jp/" target="_blank" rel="noopener">公立大学法人 高崎経済大学</a></p>
+    </div>
+    <div class="footer-brand">
+      <img src="assets/images/logo-d-cross.svg" alt="D-CROSS TAKASAKI 2026" class="footer-brand-logo">
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-akatsuki-logo">
+      <img src="assets/images/akatsuki_logotype.png" alt="AKATSUKIプロジェクト" class="footer-akatsuki-img">
+    </p>
+    <p class="footer-note">本事業は、経済産業省 令和●年度 地方の若手人材発掘育成支援事業費補助金「AKATSUKIプロジェクト」採択事業です。</p>
+    <p class="footer-akatsuki-link">「AKATSUKIプロジェクト」の詳細は<a href="https://mitouteki.jp/" target="_blank" rel="noopener">こちら</a>から</p>
+  </div>
+</footer>
+
+<script>
+var toggle = document.getElementById('navToggle');
+var mobileNav = document.getElementById('mobileNav');
+toggle.addEventListener('click', function() {
+  toggle.classList.toggle('open');
+  mobileNav.classList.toggle('open');
+});
+mobileNav.querySelectorAll('a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    toggle.classList.remove('open');
+    mobileNav.classList.remove('open');
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#ecece3"/>
+  <g fill="#1a1a1a" opacity="0.18">
+    <rect x="60"  y="200" width="120" height="130" rx="2"/>
+    <rect x="200" y="160" width="120" height="170" rx="2"/>
+    <rect x="340" y="180" width="120" height="150" rx="2"/>
+    <rect x="480" y="150" width="100" height="180" rx="2"/>
+  </g>
+  <line x1="40" y1="330" x2="600" y2="330" stroke="#3a5f4a" stroke-width="1"/>
+  <text x="320" y="108" text-anchor="middle" font-family="Outfit, Helvetica, Arial, sans-serif" font-size="14" font-weight="500" fill="#3a5f4a" letter-spacing="8">TAKASAKI CITY UNIVERSITY OF ECONOMICS</text>
+  <text x="320" y="146" text-anchor="middle" font-family="Noto Sans JP, Hiragino Kaku Gothic ProN, sans-serif" font-size="28" font-weight="800" fill="#111111" letter-spacing="4">高崎経済大学 7号館</text>
+  <text x="320" y="354" text-anchor="middle" font-family="Outfit, Helvetica, Arial, sans-serif" font-size="11" font-weight="500" fill="#4b4b4b" letter-spacing="2">※ 会場イメージ（差し替え予定）</text>
+</svg>

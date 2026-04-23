@@ -12,6 +12,10 @@
 </head>
 <body>
 
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
 <!-- HEADER -->
 <header>
   <a href="#" class="header-logo">
@@ -662,6 +666,33 @@
 
 <!-- JS -->
 <script>
+// カスタムカーソル
+(function() {
+  var dot = document.getElementById('cursorDot');
+  var ring = document.getElementById('cursorRing');
+  if (!dot || !ring) return;
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  var mx = window.innerWidth / 2, my = window.innerHeight / 2;
+  var rx = mx, ry = my;
+  window.addEventListener('mousemove', function(e) {
+    mx = e.clientX; my = e.clientY;
+    dot.style.transform = 'translate(' + mx + 'px, ' + my + 'px) translate(-50%, -50%)';
+  });
+  function animate() {
+    rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18;
+    ring.style.transform = 'translate(' + rx + 'px, ' + ry + 'px) translate(-50%, -50%)';
+    requestAnimationFrame(animate);
+  }
+  animate();
+  var hoverables = 'a, button, input, textarea, select, label, [role="button"], .pm-card, .merit-item, .approach-card';
+  document.querySelectorAll(hoverables).forEach(function(el) {
+    el.addEventListener('mouseenter', function() { dot.classList.add('hover'); ring.classList.add('hover'); });
+    el.addEventListener('mouseleave', function() { dot.classList.remove('hover'); ring.classList.remove('hover'); });
+  });
+  document.addEventListener('mouseenter', function() { dot.style.opacity = '1'; ring.style.opacity = '1'; });
+  document.addEventListener('mouseleave', function() { dot.style.opacity = '0'; ring.style.opacity = '0'; });
+})();
+
 // メリットのアコーディオン開閉
 document.querySelectorAll('.merit-toggle').forEach(function(btn) {
   btn.addEventListener('click', function(e) {
